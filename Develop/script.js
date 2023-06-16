@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 var passwordText = document.querySelector("#password");
 
 var includeLowercase, includeUppercase, includeNumeric, includeSpecial;
-
+// below is the characters the generator can use 
 function generatePassword(length) {
   var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
   var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -11,7 +11,7 @@ function generatePassword(length) {
   var specialChars = "!@#$%^&*()-_=+";
   var characters = "";
   var password = "";
-
+// below is where the perfered characters get combined
   if (includeLowercase) {
     characters += lowercaseChars;
   }
@@ -31,7 +31,7 @@ function generatePassword(length) {
   }
   return password;
 }
-
+// below is where the application shows a prompt for the user to select desired characters
 function handleGenerateClick() {
   var passwordLength = prompt("Enter desired password length (8-128)");
 
